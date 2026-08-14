@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base de Datos - Organigrama IT</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Base de Datos</h1>
+      <p class="subtitle">Organigrama y estructura de gobierno IT</p>
+      <p class="meta">Basado en los diagramas de clase: TCO, roles C&#x2011;suite, infraestructura, aplicaciones y seguridad de la informaci&oacute;n.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel controls">
+      <button id="expandAll" class="btn">Expandir todo</button>
+      <button id="collapseAll" class="btn btn--outline">Colapsar todo</button>
+      <span class="hint">Haz clic en cualquier cargo para mostrar u ocultar su equipo.</span>
+    </section>
+
+    <section class="panel org-panel" id="organigrama">
+      <h2 class="section-title">Organigrama IT</h2>
+      <div class="tree">
+        <ul>
+          <li>
+            <div class="node node--root">
+              <strong>CEO</strong>
+              <small>Gerente General</small>
+              <span class="tag">Accionistas, Directores, Stakeholders</span>
+            </div>
+            <ul>
+              <li>
+                <div class="node node--c suite" data-children>
+                  <strong>CIO</strong>
+                  <small>Chief Information Officer</small>
+                  <span class="tag">70% operativo</span>
+                </div>
+                <ul>
+                  <li>
+                    <div class="node node--ops" data-children>
+                      <strong>GTO</strong>
+                      <small>Gerente de Tecnolog&iacute;a / Operaciones</small>
+                    </div>
+                    <ul>
+                      <li>
+                        <div class="node node--metric">
+                          <strong>IT Staff Ratio</strong>
+                          <small>1.5% mundo medio &bull; 10% externos</small>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="node node--infra" data-children>
+                      <strong>Infraestructura</strong>
+                      <small>HW, Networking, Datacenter, Cloud</small>
+                    </div>
+                    <ul>
+                      <li>
+                        <div class="node">
+                          <strong>Networking</strong>
+                          <small>LAN / MAN / WAN</small>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="node" data-children>
+                          <strong>Datacenter</strong>
+                          <small>On&#8209;premise, Cloud, H&iacute;brido</small>
+                        </div>
+                        <ul>
+                          <li><div class="node node--leaf">SO y Servidores</div></li>
+                          <li><div class="node node--leaf">Virtualizaci&oacute;n / Cloud</div></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="node">
+                          <strong>Microinform&aacute;tica</strong>
+                          <small>Help Desk</small>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="node">
+                          <strong>Facilities</strong>
+                          <small>UPS, generadores, accesos</small>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="node node--devops">
+                      <strong>DevOps</strong>
+                      <small>Integraci&oacute;n y entrega continua</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="node node--apps" data-children>
+                      <strong>Aplicaciones</strong>
+                      <small>SW / MyAL / T&amp;QA / UAT</small>
+                    </div>
+                    <ul>
+                      <li>
+                        <div class="node">
+                          <strong>UAT</strong>
+                          <small>User Acceptance Test</small>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="node">
+                          <strong>T&amp;QA</strong>
+                          <small>Testing &amp; Quality Assurance</small>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="node">
+                          <strong>Help Desk / Bugs</strong>
+                          <small>Soporte y correcciones</small>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="node" data-children>
+                          <strong>Roles de desarrollo</strong>
+                        </div>
+                        <ul>
+                          <li><div class="node node--leaf">Arquitecto</div></li>
+                          <li><div class="node node--leaf">PM</div></li>
+                          <li><div class="node node--leaf">Analista funcional</div></li>
+                          <li><div class="node node--leaf">Programador (AP)</div></li>
+                          <li><div class="node node--leaf">QA</div></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="node node--security" data-children>
+                      <strong>CISO</strong>
+                      <small>Seguridad de la Informaci&oacute;n</small>
+                    </div>
+                    <ul>
+                      <li>
+                        <div class="node" data-children>
+                          <strong>Pol&iacute;ticas</strong>
+                          <small>Soft: regulaciones y procedimientos</small>
+                        </div>
+                        <ul>
+                          <li><div class="node node--leaf">BCP</div></li>
+                          <li><div class="node node--leaf">DLP</div></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="node">
+                          <strong>Hands On</strong>
+                          <small>Hard: seguridad f&iacute;sica, control cruzado con CIO</small>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="node node--c suite" data-children>
+                  <strong>CFO</strong>
+                  <small>Chief Financial Officer</small>
+                </div>
+                <ul>
+                  <li>
+                    <div class="node">
+                      <strong>Finanzas</strong>
+                      <small>An&aacute;lisis financiero, TCO</small>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="node node--c suite" data-children>
+                  <strong>COO</strong>
+                  <small>Chief Operating Officer</small>
+                </div>
+                <ul>
+                  <li><div class="node node--leaf">RRHH</div></li>
+                  <li><div class="node node--leaf">Administraci&oacute;n</div></li>
+                  <li><div class="node node--leaf">Actuarial</div></li>
+                  <li><div class="node node--leaf">Log&iacute;stica</div></li>
+                </ul>
+              </li>
+              <li>
+                <div class="node node--c suite" data-children>
+                  <strong>CTO</strong>
+                  <small>Chief Transformation / Technology Officer</small>
+                </div>
+                <ul>
+                  <li>
+                    <div class="node">
+                      <strong>Transformaci&oacute;n digital</strong>
+                      <small>IA, canales nuevos, estrategia</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="node">
+                      <strong>Competencias</strong>
+                      <small>Liderazgo, comunicaci&oacute;n, habilidades blandas</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="node" data-children>
+                      <strong>Best Practices</strong>
+                    </div>
+                    <ul>
+                      <li><div class="node node--leaf">BCP</div></li>
+                      <li><div class="node node--leaf">ISLA</div></li>
+                      <li><div class="node node--leaf">RIA</div></li>
+                      <li><div class="node node--leaf">PLAN</div></li>
+                      <li><div class="node node--leaf">DLP</div></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cards" id="conceptos">
+      <h2 class="section-title">Conceptos clave</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>TCO</h3>
+          <p><strong>Total Cost of Ownership.</strong> An&aacute;lisis financiero a 3&#8209;5 a&ntilde;os que incluye costos de adquisici&oacute;n, operaci&oacute;n y mantenimiento de la tecnolog&iacute;a.</p>
+        </article>
+        <article class="card">
+          <h3>IT Staff Ratio</h3>
+          <p>Porcentaje de personal IT dentro de la compa&ntilde;&iacute;a. En el sector financiero <strong>10% es OK</strong>; alrededor de <strong>4% indica sobre&#8209;staff</strong>.</p>
+        </article>
+        <article class="card">
+          <h3>IT Expenses Ratio</h3>
+          <p>Gasto total en tecnolog&iacute;a (licencias, sueldos, etc.) respecto a las ganancias. Aproximadamente <strong>1.5% sobre ganancias</strong> como referencia.</p>
+        </article>
+        <article class="card">
+          <h3>Seguridad de la informaci&oacute;n</h3>
+          <p>No es solo seguridad inform&aacute;tica. Combina componentes <strong>soft</strong> (pol&iacute;ticas, regulaciones) y <strong>hard</strong> (seguridad f&iacute;sica, hands on).</p>
+        </article>
+        <article class="card">
+          <h3>Infraestructura</h3>
+          <p>Hardware, networking, datacenter/cloud, microinform&aacute;tica y facilities. Puede ser <strong>on&#8209;premise, cloud o h&iacute;brido</strong>.</p>
+        </article>
+        <article class="card">
+          <h3>Aplicaciones</h3>
+          <p>Ciclo de desarrollo: Arquitecto &rarr; PM &rarr; Analista funcional &rarr; Programador &rarr; QA. Incluye UAT, T&amp;QA y Help Desk.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Material de estudio - Base de Datos &bull; <a href="https://github.com/voftec/base-de-datos" target="_blank" rel="noopener">Repositorio</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
